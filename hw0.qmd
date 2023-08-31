@@ -1,0 +1,43 @@
+---
+title: "Homework 0"
+author: "Elizabeth Imhoff"
+format: html
+editor: visual
+execute: 
+  echo: FALSE
+---
+
+1.  
+
+```{r}
+a <- 1
+b <- 3
+c <- 2
+
+sol <- (-b + sqrt(b^2 - 4*a*c))/2*a
+sol_2 <- (-b - sqrt(b^2 - 4*a*c))/2*a
+
+if (is.numeric(sol) == TRUE & is.numeric(sol_2) == TRUE){
+  print(sol)
+  print(sol_2)
+
+} else if (is.numeric(sol) == FALSE & is.numeric(sol_2) == TRUE){
+  print(sol_2)
+} else if (is.numeric(sol) == TRUE & is.numeric(sol_2) == FALSE){
+  print(sol)
+  
+} else {print("None")}
+
+```
+
+Above are the solution(s) to the quadratic equation.
+
+2.  
+
+```{r}
+x <- seq(-5,5,0.1)
+plot(x, a*x^2 + b*x + c, type = "l")
+abline(h=0, lty = 2)
+```
+
+This plot is the graph of quadratic function. When a=1, b=3, and c=2, the solutions to the quadratic equation are -2 and -1, which are where the function crosses the x-axis. If the function (plotted line) did not cross the x-axis, then the there would be no solutions to the equation. If the function crosses the x-axis once, then there is only one solution to the quadratic equation.
